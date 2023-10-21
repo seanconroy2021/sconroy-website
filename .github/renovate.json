@@ -8,7 +8,6 @@
   "timezone": "UTC",
   "separateMinorPatch": true,
   "statusCheckVerify": true,
-  "prCreation": "status-success",
   "masterIssue": false,
   "lockFileMaintenance": {
     "enabled": true,
@@ -18,7 +17,7 @@
     {
       "depTypeList": ["dependencies"],
       "groupName": "Runtime Dependencies",
-      "automerge": false
+      "automerge": true
     },
     {
       "depTypeList": ["devDependencies"],
