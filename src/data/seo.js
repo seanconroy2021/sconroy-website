@@ -2,36 +2,36 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Aspiring Software Engineer specializing in Go, Java, and Python. Currently an Intern at Red Hat, focusing on back-end development and scalable web applications.",
+		keywords: ["Software Engineer", "Go", "Java", "Python", "Red Hat", "Backend Developer"],
 	},
 
 	{
 		page: "about",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Information Technology student about to graduate, with hands-on experience in Go, Java, and MySQL. Passionate about coding and problem-solving.",
+		keywords: ["Go", "Java", "MySQL", "Information Technology", "Software Engineering"],
 	},
 
 	{
 		page: "articles",
 		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Blog posts covering a range of topics including Go, Java, and Python programming, software engineering best practices, and tech trends.",
+		keywords: ["Blog", "Go", "Java", "Python", "Software Engineering", "Tech Trends"],
 	},
 
 	{
 		page: "projects",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Showcasing a diverse set of software engineering projects utilizing Go, Java, and Python. Many are open-source and contributions are welcome.",
+		keywords: ["Projects", "Go", "Java", "Python", "Open-Source", "Software Engineering"],
 	},
 
 	{
 		page: "contact",
 		description:
-			"If you're interested in collaborating on a project, feel free to reach out to me. I'm always open to new ideas and opportunities.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Open to collaborations in software development, particularly in Go, Java, and Python. Let's turn ideas into code.",
+		keywords: ["Contact", "Collaboration", "Go", "Java", "Python", "Software Development"],
 	},
 ];
 
