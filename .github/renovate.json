@@ -1,0 +1,39 @@
+{
+  "extends": [
+    "config:base",
+    "group:monorepos",
+    "group:recommended"
+  ],
+  "schedule": ["at any time"],
+  "timezone": "UTC",
+  "separateMinorPatch": true,
+  "statusCheckVerify": true,
+  "prCreation": "status-success",
+  "masterIssue": false,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 3am on the first day of the month"]
+  },
+  "packageRules": [
+    {
+      "depTypeList": ["dependencies"],
+      "groupName": "Runtime Dependencies",
+      "automerge": false
+    },
+    {
+      "depTypeList": ["devDependencies"],
+      "groupName": "Development Dependencies",
+      "automerge": true
+    },
+    {
+      "updateTypes": ["minor", "patch"],
+      "groupName": "Non-Breaking Updates",
+      "automerge": true
+    },
+    {
+      "updateTypes": ["major"],
+      "groupName": "Major Updates",
+      "automerge": false
+    }
+  ]
+}
