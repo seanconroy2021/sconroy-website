@@ -2,8 +2,8 @@ import React from "react";
 
 function article_1() {
 	return {
-		date: "7 May 2023",
-		title: "The Benefits of Cloud Computing",
+		date: "25 November 2023",
+		title: "How to use Enterprise Contract in your Github Workflows",
 		description:
 			"Cloud computing offers a range of benefits, including cost savings and increased flexibility. Find out why more businesses are turning to the cloud.",
 		keywords: [
@@ -41,8 +41,8 @@ function article_1() {
 
 function article_2() {
 	return {
-		date: "7 May 2023",
-		title: "Artificial Intelligence in Healthcare",
+		date: "05 December 2023",
+		title: "My time at Red Hat as an intern",
 		description:
 			"AI is transforming the healthcare industry, from improving patient outcomes to streamlining operations. Discover the latest applications of this game-changing technology.",
 		style: ``,
@@ -62,8 +62,8 @@ function article_2() {
 
 function article_3() {
 	return {
-		date: "7 May 2024",
-		title: "sean Intelligence in Healthcare",
+		date: "01 December 2023",
+		title: "How to host your personal website with Github",
 		description:
 			"AI is transforming the healthcare industry, from improving patient outcomes to streamlining operations. Discover the latest applications of this game-changing technology.",
 		style: ``,
