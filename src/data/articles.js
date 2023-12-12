@@ -83,6 +83,9 @@ function article_1() {
 				introducing myself as the new intern. I would be working as a part of Red Hat's secure build service, specifically Enterprise Contract, 
 				which is about "Securely verifying supply chain artifacts and enforcing policies".
 				</p>
+
+				<img src="https://i.ibb.co/Vv08nBj/1688480295652.jpg"
+                     alt="Red Hat Office" className="randImage" /> 
                 <p>
 				My team is mostly principal engineers based worldwide,
 				meaning communication occurs over Google Meet and Slack. My group was very welcoming and willing to answer 
