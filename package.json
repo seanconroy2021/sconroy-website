@@ -57,5 +57,10 @@
 	"prettier": {
 		"useTabs": true,
 		"tabWidth": 4
+	},
+	"overrides": {
+		"resolve-url-loader": {
+			"postcss": "^8.0.0"
+		}
 	}
 }
