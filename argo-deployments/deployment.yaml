@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: default-backend
+  namespace: default-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: default-backend
+  template:
+    metadata:
+      labels:
+        app: default-backend
+    spec:
+      containers:
+      - name: default-backend
+        image: ghcr.io/seanconroy2021/sconroy-website@sha256:307a76566ff0744ef149214e11ed9549266560c3b32a4394bc37d65b48442cbb
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 80

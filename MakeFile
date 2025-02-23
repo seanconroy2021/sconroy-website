@@ -1,0 +1,54 @@
+# Variables
+IMAGE_REGISTRY=ghcr.io
+IMAGE_REPO=$(IMAGE_REGISTRY)/seanconroy2021/sconroy-website
+TAG=$(shell git rev-parse --short HEAD)
+DIGEST=$(shell podman images --format "{{.Digest}}" $(IMAGE_REPO):$(TAG))
+
+# Default target
+.PHONY: all
+all: build push update-argocd sync
+
+# Build the container image
+.PHONY: build
+build:
+	@echo "🚀 Building image $(IMAGE_REPO):$(TAG)..."
+	podman build -t $(IMAGE_REPO):$(TAG) .
+
+# Push the image to GHCR
+.PHONY: push
+push: build
+	@echo "📦 Pushing image to GHCR..."
+	podman push $(IMAGE_REPO):$(TAG)
+
+# Update deployment.yaml with the new image digest
+.PHONY: update-argocd
+update-argocd:
+	@echo "🔄 Updating deployment.yaml with new digest..."
+	sed -i "s|image: $(IMAGE_REPO)@.*|image: $(IMAGE_REPO)@$(DIGEST)|" argo-deployments/deployment.yaml
+	git add argo-deployments/deployment.yaml
+	git commit -m "🚀 Update ArgoCD deployment to new image digest $(DIGEST)"
+	git push
+
+# Sync ArgoCD to deploy the latest version
+.PHONY: sync
+sync:
+	@echo "🔄 Syncing ArgoCD..."
+	kubectl annotate application sconroy-website -n argocd argocd.argoproj.io/refresh=hard
+
+# Check deployment status
+.PHONY: status
+status:
+	@echo "📊 Checking deployment status..."
+	kubectl get pods -n default-backend
+
+# Force rollback (if needed)
+.PHONY: rollback
+rollback:
+	@echo "⏪ Rolling back to previous version..."
+	argocd app rollback sconroy-website
+
+# Cleanup old images
+.PHONY: clean
+clean:
+	@echo "🧹 Cleaning up old images..."
+	podman image prune -f
