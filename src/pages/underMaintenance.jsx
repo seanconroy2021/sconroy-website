@@ -29,7 +29,7 @@ const Notfound = () => {
 							</div>
                             <FontAwesomeIcon icon="fa-solidfa-hammer" style={{color: "#f4cd4c",}} />
 							<div className="not-found-message">
-                            My site is currently undergoing maintenance. I apologize for the inconvenience and expect to be back shortly.
+                            My site is currently undergoing maintenance.
 								<br />
 
 							</div>
