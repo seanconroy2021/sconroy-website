@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: default-backend
-        image: ghcr.io/seanconroy2021/sconroy-website@sha256:3e3eba864b289e4b89d539a648fc68b9fca01c99f5044612f212f2e1be5dc42a
+        image: ghcr.io/seanconroy2021/sconroy-website@sha256:ab6f5d612033d41509b37dce9eb822e8ff29fdfa66edfc946bcc83cfdffb12b7
         resources:
           limits:
             memory: "128Mi"
