@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - 'argo-deployments/**'  # Ignores changes inside argo-deployments/
+      - '.github/workflows/**'  # Ignores changes inside .github/workflows/
 
 env:
   IMAGE_REGISTRY: ghcr.io
