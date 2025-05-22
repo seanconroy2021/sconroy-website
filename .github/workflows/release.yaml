@@ -5,8 +5,10 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'argo-deployments/**'  # Ignores changes inside argo-deployments/
-      - '.github/workflows/**'  # Ignores changes inside .github/workflows/
+      - 'argo-deployments/**'
+      - '.github/workflows/**'  
+      - 'konflux/**'
+      - '.tekton/**'
 
 env:
   IMAGE_REGISTRY: ghcr.io
