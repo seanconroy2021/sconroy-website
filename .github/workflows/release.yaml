@@ -74,16 +74,16 @@ jobs:
       env:
         DIGEST: ${{ steps.push-image.outputs.digest }}
 
-    - name: Update ArgoCD Deployment YAML with New Image Digest
-      run: |
-        sed -i "s|image: ghcr.io/seanconroy2021/sconroy-website@.*|image: ghcr.io/seanconroy2021/sconroy-website@${DIGEST}|" argo-deployments/deployment.yaml
+    # - name: Update ArgoCD Deployment YAML with New Image Digest
+    #   run: |
+    #     sed -i "s|image: ghcr.io/seanconroy2021/sconroy-website@.*|image: ghcr.io/seanconroy2021/sconroy-website@${DIGEST}|" argo-deployments/deployment.yaml
 
-    - name: Check for Changes and Commit
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
+    # - name: Check for Changes and Commit
+    #   run: |
+    #     git config --global user.name "github-actions"
+    #     git config --global user.email "github-actions@github.com"
 
-        # Commit and push changes
-        git add argo-deployments/deployment.yaml
-        git commit -m "Update ArgoCD deployment to new image digest ${{ env.DIGEST }}"
-        git push
+    #     # Commit and push changes
+    #     git add argo-deployments/deployment.yaml
+    #     git commit -m "Update ArgoCD deployment to new image digest ${{ env.DIGEST }}"
+    #     git push
