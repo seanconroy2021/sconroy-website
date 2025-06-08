@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: hello-pipeline
+spec:
+  tasks:
+    - name: echo
+      taskSpec:
+        steps:
+          - name: hello
+            image: ubuntu
+            script: |
+              #!/usr/bin/env bash
+              echo "Hello from PaC!"
